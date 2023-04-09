@@ -9,6 +9,20 @@ const registerForm = document.getElementById("register-form");
 const modalBtn = document.getElementById("modal-btn");
 const regModal = document.getElementById("register-modal");
 
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function validateDateOfBirth(year, month, day) {
+  const numYear = Number(year);
+  const numMonth = Number(month);
+  const numDay = Number(day);
+
+  const date = new Date(numYear, numMonth - 1, numDay);
+  return date.getFullYear() === numYear && date.getMonth() === numMonth - 1 && date.getDate() === numDay;
+}
+
 modalBtn.addEventListener("click", (e) => {
   e.preventDefault();
   regModal.style.display = "none";
@@ -24,26 +38,42 @@ registerForm.addEventListener("submit", async (e) => {
 
   const div = regModal.getElementsByTagName("div")[0];
   const h2 = div.getElementsByTagName("h2")[0];
-  if (data.length > 0) {
+  if (
+    e.target.username.value === "" ||
+    e.target.email.value === "" ||
+    e.target.year.value === "" ||
+    e.target.month.value === "" ||
+    e.target.day.value === ""
+  ) {
+    h2.innerHTML = "Please fill in all the fields!";
+  } else if (!validateEmail(e.target.email.value)) {
+    h2.innerHTML = "Please enter a valid email!";
+  } else if (!validateDateOfBirth(e.target.year.value, e.target.month.value, e.target.day.value)) {
+    h2.innerHTML = "Please enter a valid date of birth!";
+  } else if (data.length > 0) {
     h2.innerHTML = "Email already in use. Try again!";
   } else {
+    const { data, count } = await supa
+      .from('users')
+      .select('*', { count: 'exact' })
+    // console.log(count)
     const { error } = await supa.from("users").insert({
-      // id: await supa.from('users').select().max("id") + 1,
+      id: count,
       username: e.target.username.value,
       email: e.target.email.value,
       birthdate: new Date(
         e.target.year.value +
-          "-" +
-          e.target.month.value +
-          "-" +
-          e.target.day.value
+        "-" +
+        e.target.month.value +
+        "-" +
+        e.target.day.value
       ),
     });
     console.log(error);
     if (error) {
       h2.innerHTML = "Something went wrong. Try again!";
     } else {
-      h2.innerHTML = "Registration complete! your ID is ";
+      h2.innerHTML = "Registration complete! your ID is " + count;
     }
   }
   regModal.style.display = "flex";
