@@ -19,19 +19,13 @@ registerForm.addEventListener("submit", async (e) => {
 
   const { data, error } = await supa
     .from("users")
-    .select("username, email")
-    .or(
-      "username.eq." +
-        e.target.username.value +
-        ", " +
-        "email.eq." +
-        e.target.email.value
-    );
+    .select("email")
+    .or("email.eq." + e.target.email.value);
 
   const div = regModal.getElementsByTagName("div")[0];
   const h2 = div.getElementsByTagName("h2")[0];
   if (data.length > 0) {
-    h2.innerHTML = "Username or Email already in use. Try again!";
+    h2.innerHTML = "Email already in use. Try again!";
   } else {
     const { error } = await supa.from("users").insert({
       // id: await supa.from('users').select().max("id") + 1,
