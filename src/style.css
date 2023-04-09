@@ -14,6 +14,47 @@ body,
   margin: 0;
 }
 
+#register-modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000A;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: none;
+}
+
+#register-modal > div {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: auto;
+  height: 30vh;
+  width: 30vw;
+  background-color: white;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-btn {
+  margin-top: 2rem;
+  background-color: #73b3a3;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1cqmax;
+}
+
+#modal-btn:hover {
+  cursor: pointer;
+}
+
+#register-modal > div > h2 {
+  margin-top: 1.5rem;
+}
+
 #cartoon-scenarios {
   height: 100%;
 }

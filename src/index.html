@@ -13,6 +13,12 @@
 
 <body>
     <div id="wrapper">
+        <div id="register-modal">
+            <div>
+                <h2>Samples text</h2>
+                <button id="modal-btn">Close</button>
+            </div>
+        </div>
         <div id="register" class="section register highlighted">
             <div class="grid">
                 <div class="register-card">
@@ -23,7 +29,7 @@
                         </h1>
                         <h2>Register now and don't miss any fun!</h2>
                     </div>
-                    <form id="register-form" action="">
+                    <form id="register-form">
                         <p>Username</p>
                         <div class="inline">
                             <input type="text" placeholder="Username" name="username" />
@@ -33,7 +39,7 @@
                         <div class="inline">
                             <input type="text" placeholder="Year" name="year" />
                             <input type="text" placeholder="Month" name="month" />
-                            <input type="text" placeholder="Day" name="Day" />
+                            <input type="text" placeholder="Day" name="day" />
                         </div>
                         <button type="submit">Register</button>
                     </form>
@@ -125,6 +131,7 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -164,6 +171,7 @@
             });
         });
     </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
