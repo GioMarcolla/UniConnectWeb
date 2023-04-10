@@ -24,6 +24,7 @@ registerForm.addEventListener("submit", async (e) => {
 
   const div = regModal.getElementsByTagName("div")[0];
   const h2 = div.getElementsByTagName("h2")[0];
+
   if (data.length > 0) {
     h2.innerHTML = "Email already in use. Try again!";
   } else {
@@ -31,13 +32,7 @@ registerForm.addEventListener("submit", async (e) => {
       // id: await supa.from('users').select().max("id") + 1,
       username: e.target.username.value,
       email: e.target.email.value,
-      birthdate: new Date(
-        e.target.year.value +
-          "-" +
-          e.target.month.value +
-          "-" +
-          e.target.day.value
-      ),
+      birthdate: new Date(e.target.birthday.value),
     });
     console.log(error);
     if (error) {

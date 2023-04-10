@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniConnect</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./highlighted.css">
 </head>
 
 <body>
@@ -19,59 +21,91 @@
                 <button id="modal-btn">Close</button>
             </div>
         </div>
-        <div id="register" class="section register highlighted">
-            <div class="grid">
-                <div class="register-card">
-                    <div class="call-for-action">
-                        <h1>
-                            <span class="accent-text">425</span>
-                            users have already signed up and waiting for beta!
-                        </h1>
-                        <h2>Register now and don't miss any fun!</h2>
+        <div id="register" class="section highlighted ucgreen">
+            <div class="row">
+                <div class="col-md-12 col-lg-5 order-lg-1 order-md-2 order-sm-2 order-2">
+                    <div id="registration" class="card border-0">
+                        <div class="card-header p-4 text-center bg-white ">
+                            <h1 class="fw-bold fs-2 fs-sm-1">
+                                <span class="accent-text">425</span>
+                                users have already signed up and waiting for beta!
+                            </h1>
+                            <p class="fs-4 pt-4 text-body-secondary">Register now and don't miss any fun!</p>
+                        </div>
+                        <div class="card-body">
+                            <form id="register-form">
+                                <div class="mb-2">
+                                    <label for="usernameInput" class="form-label fw-bold">Username:</label>
+                                    <input type="username" name="username" class="form-control input-ucgreen" id="usernameInput"
+                                        aria-describedby="usernameHelp">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="emailInput" class="form-label fw-bold">Email:</label>
+                                    <input type="email" name="email" class="form-control input-ucgreen" id="emailInput"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-2">
+                                    <label for="birthdayInput" class="form-label fw-bold">Birthday:</label>
+                                    <input type="date" name="birthday" class="form-control input-ucgreen" id="birthdayInput"
+                                        aria-describedby="birthdayHelp">
+                                </div>
+                                <div class="mt-4">
+                                    <button type="submit" class="btn btn-ucgreen w-100">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <form id="register-form">
-                        <p>Username</p>
-                        <div class="inline">
-                            <input type="text" placeholder="Username" name="username" />
-                            <input type="text" placeholder="Email" name="email" />
-                        </div>
-                        <p>Date of Birth</p>
-                        <div class="inline">
-                            <input type="text" placeholder="Year" name="year" />
-                            <input type="text" placeholder="Month" name="month" />
-                            <input type="text" placeholder="Day" name="day" />
-                        </div>
-                        <button type="submit">Register</button>
-                    </form>
                 </div>
-                <div id="reasons-section">
-                    <img class="large-logo" src="../public/images/K logo.png" alt="">
-                    <br />
-                    <img class="large-name" src="../public/images/image 1.png" alt="">
-                    <h2 class="headline">Live in the moment & connect with your surroundings</h2>
-                    <ul id="reasons-list">
-                        <li>
-                            <p>Get to know people around you!</p>
-                        </li>
-                        <li>
-                            <p>Receiving updates on events happing around you!</p>
-                        </li>
-                        <li>
-                            <p>Know about nearby communities and groups!</p>
-                        </li>
-                        <li>
-                            <p>Having multiple and customizable profiles!</p>
-                        </li>
-                        <li>
-                            <p>Manage your presence with your friends!</p>
-                        </li>
-                        <li>
-                            <p>Get an ID number starting from “00000000000”!</p>
-                        </li>
-                    </ul>
+                <div class="col-md-12 col-lg-7 text-center order-lg-2 order-md-1 order-sm-1 order-1">
+                    <div class="container logo mb-4">
+                        <img src="../public/images/logo.png" alt="">
+                    </div>
+                    <h2 class="text-purple fw-bold mb-4">Live in the moment & connect with your surroundings</h2>
+                    <div class="text-start fs-4 px-3">
+                        <ul id="reasons-list ">
+                            <li>
+                                <p>Get to know people around you!</p>
+                            </li>
+                            <li>
+                                <p>Receiving updates on events happing around you!</p>
+                            </li>
+                            <li>
+                                <p>Know about nearby communities and groups!</p>
+                            </li>
+                            <li>
+                                <p>Having multiple and customizable profiles!</p>
+                            </li>
+                            <li>
+                                <p>Manage your presence with your friends!</p>
+                            </li>
+                            <li>
+                                <p>Get an ID number starting from “00000000000”!</p>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
+        <div id="mapview" class="section highlighted-reverse ucgreen">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 map-img order-lg-1 order-md-2 order-sm-2 order-2">
+                    <img src="../public/images/Group 157.png" alt="">
+                </div>
+                <div class="col-lg-6 col-md-12  order-lg-2 order-md-1 order-sm-1 order-1">
+                    <h3 class="dash-top purple px-2">Accessing nearby activities & communities</h3>
+                    <div id="map-details" class="row py-3 px-2 d-block-flex text-center">
+                        <div class="col-6"><img src="../public/images/Frame 9.png" alt=""></div>
+                        <div class="col-6"><img src="../public/images/Frame 8.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- 
         <div id="map" class="section map-view highlighted-reverse">
             <img src="../public/images/Group 157.png" alt="">
             <div id="section-map-details">
@@ -85,21 +119,20 @@
         <div id="location" class="section highlighted purple">
             <img src="../public/images/Group 174.png" alt="">
             <div>
-                <h1 class="dash-top purple">I get to choose whether to share my location</h1>
                 <ul id="reasons-list">
-                    <li>
-                        <p>Sign into locations for it to be shared</p>
-                    </li>
-                    <li>
-                        <p>Users are “Somewhere Unknown” when not signed in</p>
-                    </li>
-                    <li>
-                        <p>Friends can see your location if you are signed in</p>
-                    </li>
-                    <li>
-                        <p>Users can see each other after sign into the same location</p>
-                    </li>
-                </ul>
+                        <li>
+                            <p>Sign into locations for it to be shared</p>
+                        </li>
+                        <li>
+                            <p>Users are “Somewhere Unknown” when not signed in</p>
+                        </li>
+                        <li>
+                            <p>Friends can see your location if you are signed in</p>
+                        </li>
+                        <li>
+                            <p>Users can see each other after sign into the same location</p>
+                        </li>
+                    </ul>
             </div>
         </div>
         <div id="customize" class="section highlighted-reverse purple">
@@ -119,20 +152,23 @@
                         <p>Users can see each other after sign into the same location</p>
                     </li>
                 </ul>
-                <!-- <div id="cartoon-scenarios">
+                <div id="cartoon-scenarios">
                     <img src="https://picsum.photos/id/101/1600/900" alt="">
                     <img src="https://picsum.photos/id/102/1600/900" alt="">
                     <img src="https://picsum.photos/id/103/1600/900" alt="">
-                </div> -->
+                </div>
             </div>
             <div>
                 <img src="../public/images/Group 175.png" alt="">
                 <h2>Our lives are multifaceted. Know me 1 side at a time!</h2>
             </div>
-        </div>
+        </div> -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
@@ -170,7 +206,7 @@
                 dots: true
             });
         });
-    </script>
+    </script> -->
     <script src="./app.js"></script>
 </body>
 
