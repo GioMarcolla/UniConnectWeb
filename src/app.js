@@ -8,19 +8,12 @@ const registerForm = document.getElementById("register-form");
 
 const modalBtn = document.getElementById("modal-btn");
 const regModal = document.getElementById("register-modal");
+const counterSpan = document.getElementById('registration-count')
+
 
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
-}
-
-function validateDateOfBirth(year, month, day) {
-  const numYear = Number(year);
-  const numMonth = Number(month);
-  const numDay = Number(day);
-
-  const date = new Date(numYear, numMonth - 1, numDay);
-  return date.getFullYear() === numYear && date.getMonth() === numMonth - 1 && date.getDate() === numDay;
 }
 
 modalBtn.addEventListener("click", (e) => {
@@ -41,21 +34,18 @@ registerForm.addEventListener("submit", async (e) => {
   if (
     e.target.username.value === "" ||
     e.target.email.value === "" ||
-    e.target.year.value === "" ||
-    e.target.month.value === "" ||
-    e.target.day.value === ""
+    e.target.birthday.value === ""
   ) {
     h2.innerHTML = "Please fill in all the fields!";
   } else if (!validateEmail(e.target.email.value)) {
     h2.innerHTML = "Please enter a valid email!";
-  } else if (!validateDateOfBirth(e.target.year.value, e.target.month.value, e.target.day.value)) {
-    h2.innerHTML = "Please enter a valid date of birth!";
   } else if (data.length > 0) {
     h2.innerHTML = "Email already in use. Try again!";
   } else {
     const { data, count } = await supa
       .from('users')
       .select('*', { count: 'exact' })
+      counterSpan.innerHTML = count + 1
     // console.log(count)
     const { error } = await supa.from("users").insert({
       id: count,
@@ -72,3 +62,11 @@ registerForm.addEventListener("submit", async (e) => {
   }
   regModal.style.display = "flex";
 });
+
+window.addEventListener('DOMContentLoaded', async (e) => {
+  e.preventDefault();
+  const { data, count } = await supa
+      .from('users')
+      .select('*', { count: 'exact' })
+      counterSpan.innerHTML = count
+})
