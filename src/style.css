@@ -143,6 +143,25 @@ body,
   #mapview {
     padding-top: 2rem;
   }
+
+  #location-settings > img,
+  #custom-view > img {
+    height: auto !important;
+    width: 80% !important;
+  }
+
+  #location-settings,
+  #custom-view {
+    height: auto !important;
+  }
+
+  #location-choice {
+    padding-bottom: 0 !important;
+  }
+
+  #location-choice > div > div:nth-child(1) {
+    padding-bottom: 2rem;
+  }
 }
 
 ul {
@@ -167,7 +186,7 @@ ul > li::before {
 }
 
 li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0.5rem;
