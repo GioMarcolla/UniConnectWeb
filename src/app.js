@@ -8,8 +8,7 @@ const registerForm = document.getElementById("register-form");
 
 const modalBtn = document.getElementById("modal-btn");
 const regModal = document.getElementById("register-modal");
-const counterSpan = document.getElementById('registration-count')
-
+const counterSpan = document.getElementById("registration-count");
 
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -43,9 +42,9 @@ registerForm.addEventListener("submit", async (e) => {
     h2.innerHTML = "Email already in use. Try again!";
   } else {
     const { data, count } = await supa
-      .from('users')
-      .select('*', { count: 'exact' })
-      counterSpan.innerHTML = count + 1
+      .from("users")
+      .select("*", { count: "exact" });
+    counterSpan.innerHTML = count + 1;
     // console.log(count)
     const { error } = await supa.from("users").insert({
       id: count,
@@ -63,10 +62,43 @@ registerForm.addEventListener("submit", async (e) => {
   regModal.style.display = "flex";
 });
 
-window.addEventListener('DOMContentLoaded', async (e) => {
+window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   const { data, count } = await supa
-      .from('users')
-      .select('*', { count: 'exact' })
-      counterSpan.innerHTML = count
-})
+    .from("users")
+    .select("*", { count: "exact" });
+  counterSpan.innerHTML = count;
+});
+
+// const observer = new IntersectionObserver((entries) => {
+//   console.log(entries);
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("fadeInUp");
+//     }
+//   });
+// });
+
+// // Tell the observer which elements to track
+// observer.observe(document.getElementsByTagName("ul"));
+
+const uls = document.getElementsByTagName("ul");
+console.log(uls[0])
+const observers = []
+for (ii = 0; ii < uls.length; ii++) {
+  observers.push(new IntersectionObserver((entries) => {
+    console.log(entries)
+    entries
+      .forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fadeInUp");
+
+          return;
+        }
+        // entry.target.classList.remove("fadeInUp");
+      });
+  }));
+
+  observers[ii].observe(uls[ii])
+}
+

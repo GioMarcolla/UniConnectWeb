@@ -46,6 +46,31 @@
   background: radial-gradient(circle at 100% 0%, #73b3a3ff 0%, #fff0 30%);
 }
 
+/* Purple */
+.highlighted.ucpurple::before {
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 0% 0%, #5b5081 0%, #fff0 30%);
+}
+
+.highlighted.ucpurple::after {
+  top: 0;
+  right: 0;
+  background: radial-gradient(circle at 100% 100%, #5b5081 0%, #fff0 30%);
+}
+
+.highlighted-reverse.ucpurple::before {
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 0% 100%, #5b5081 0%, #fff0 30%);
+}
+
+.highlighted-reverse.ucpurple::after {
+  top: 0;
+  right: 0;
+  background: radial-gradient(circle at 100% 0%, #5b5081 0%, #fff0 30%);
+}
+
 @media only screen and (max-width: 992px) {
   .highlighted-reverse.ucgreen::after,
   .highlighted-reverse.ucgreen::before,

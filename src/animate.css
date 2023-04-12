@@ -1,0 +1,37 @@
+.fadeInUp > li > *,
+.fadeInUp > li::before {
+  animation: FadeInUp 1500ms ease-in-out;
+  animation-delay: inherit;
+  animation-fill-mode: forwards;
+}
+
+.fadeInUp > li:nth-child(1) {
+  animation-delay: 500ms;
+}
+.fadeInUp > li:nth-child(2) {
+  animation-delay: 800ms;
+}
+.fadeInUp > li:nth-child(3) {
+  animation-delay: 1100ms;
+}
+.fadeInUp > li:nth-child(4) {
+  animation-delay: 1400ms;
+}
+.fadeInUp > li:nth-child(5) {
+  animation-delay: 1700ms;
+}
+.fadeInUp > li:nth-child(6) {
+    animation-delay: 2000ms;
+  }
+
+@keyframes FadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -11,6 +11,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./highlighted.css">
+    <link rel="stylesheet" href="./animate.css">
 </head>
 
 <body>
@@ -36,8 +37,8 @@
                             <form id="register-form">
                                 <div class="mb-2">
                                     <label for="usernameInput" class="form-label fw-bold">Username:</label>
-                                    <input type="username" name="username" class="form-control input-ucgreen" id="usernameInput"
-                                        aria-describedby="usernameHelp">
+                                    <input type="username" name="username" class="form-control input-ucgreen"
+                                        id="usernameInput" aria-describedby="usernameHelp">
                                 </div>
                                 <div class="mb-2">
                                     <label for="emailInput" class="form-label fw-bold">Email:</label>
@@ -46,8 +47,8 @@
                                 </div>
                                 <div class="mb-2">
                                     <label for="birthdayInput" class="form-label fw-bold">Birthday:</label>
-                                    <input type="date" name="birthday" class="form-control input-ucgreen" id="birthdayInput"
-                                        aria-describedby="birthdayHelp">
+                                    <input type="date" name="birthday" class="form-control input-ucgreen"
+                                        id="birthdayInput" aria-describedby="birthdayHelp">
                                 </div>
                                 <div class="mt-4">
                                     <button type="submit" class="btn btn-ucgreen w-100">Submit</button>
@@ -61,8 +62,8 @@
                         <img src="../public/images/logo.png" alt="">
                     </div>
                     <h2 class="text-purple fw-bold mb-4">Live in the moment & connect with your surroundings</h2>
-                    <div class="text-start fs-4 px-3">
-                        <ul id="reasons-list ">
+                    <div class="text-start fs-4">
+                        <ul>
                             <li>
                                 <p>Get to know people around you!</p>
                             </li>
@@ -101,26 +102,14 @@
                 </div>
             </div>
         </div>
-
-
-
-
-        <!-- 
-        <div id="map" class="section map-view highlighted-reverse">
-            <img src="../public/images/Group 157.png" alt="">
-            <div id="section-map-details">
-                <h1 class="dash-top">Accessing nearby activities & communities</h1>
-                <div id="map-details">
-                    <img src="../public/images/Frame 9.png" alt="">
-                    <img src="../public/images/Frame 8.png" alt="">
+        <div id="location-choice" class="section highlighted ucpurple p-5">
+            <div class="row">
+                <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                    <img src="../public/images/Group 174.png" alt="">
                 </div>
-            </div>
-        </div>
-        <!-- For this page, the left side is the slick slider with six pictures, each picture should like with different words for explanantion of the page  -->
-        <div id="location" class="section highlighted purple">
-            <img src="../public/images/Group 174.png" alt="">
-            <div>
-                <ul id="reasons-list">
+                <div class="col-lg-6 col-md-12">
+                    <h3 class="dash-top purple">I get to choose whether to share my location</h3>
+                    <ul class="fs-4 py-3">
                         <li>
                             <p>Sign into locations for it to be shared</p>
                         </li>
@@ -134,80 +123,48 @@
                             <p>Users can see each other after sign into the same location</p>
                         </li>
                     </ul>
-            </div>
-        </div>
-        <div id="customize" class="section highlighted-reverse purple">
-            <div>
-                <h1 class="dash-top purple">Multiple customizable profiles</h1>
-                <ul id="reasons-list">
-                    <li>
-                        <p>Sign into locations for it to be shared</p>
-                    </li>
-                    <li>
-                        <p>Users are “Somewhere Unknown” when not signed in</p>
-                    </li>
-                    <li>
-                        <p>Friends can see your location if you are signed in</p>
-                    </li>
-                    <li>
-                        <p>Users can see each other after sign into the same location</p>
-                    </li>
-                </ul>
-                <div id="cartoon-scenarios">
-                    <img src="https://picsum.photos/id/101/1600/900" alt="">
-                    <img src="https://picsum.photos/id/102/1600/900" alt="">
-                    <img src="https://picsum.photos/id/103/1600/900" alt="">
                 </div>
             </div>
-            <div>
-                <img src="../public/images/Group 175.png" alt="">
-                <h2>Our lives are multifaceted. Know me 1 side at a time!</h2>
+        </div>
+
+        <div id="customize" class="section highlighted-reverse ucpurple">
+            <div class="solidBG ucpurple"></div>
+            <div class="row p-5">
+                <div class="col-lg-6 col-md-12">
+                    <h3 class="dash-top purple py-2">Multiple customizable profiles</h3>
+                    <ul class="fs-4">
+                        <li>
+                            <p>Sign into locations for it to be shared</p>
+                        </li>
+                        <li>
+                            <p>Users are “Somewhere Unknown” when not signed in</p>
+                        </li>
+                        <li>
+                            <p>Friends can see your location if you are signed in</p>
+                        </li>
+                        <li>
+                            <p>Users can see each other after sign into the same location</p>
+                        </li>
+                    </ul>
+                    <div id="cartoon-scenarios">
+                        <!-- <img src="https://picsum.photos/id/101/1600/900" alt="">
+                        <img src="https://picsum.photos/id/102/1600/900" alt="">
+                        <img src="https://picsum.photos/id/103/1600/900" alt=""> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div id="custom-view">
+                        <img src="../public/images/Group 175.png" alt="">
+                    </div>
+                    <h3 class="text-white">Our lives are multifaceted. Know me 1 side at a time!</h3>
+                </div>
             </div>
-        </div> -->
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        let sections = ['register', 'map', 'location', 'customize']
-        let pos = 0;
-        let running = false;
-
-        window.addEventListener("wheel", (e) => {
-            if (!running) {
-                running = true
-                var dir = e.deltaY
-                if ((dir > 0) && (pos < (sections.length - 1))) {
-                    pos += 1
-                } else if ((dir < 0) && (pos > 0)) {
-                    pos -= 1
-                }
-
-                let element = document.getElementById(sections[pos]);
-                element.scrollIntoView();
-                setTimeout(() => {
-                    running = false
-                }, 150)
-
-            }
-            e.preventDefault();
-        }, { passive: false })
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('#cartoon-scenarios').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 3,
-                adaptiveHeight: true,
-                dots: true
-            });
-        });
-    </script> -->
     <script src="./app.js"></script>
 </body>
 
