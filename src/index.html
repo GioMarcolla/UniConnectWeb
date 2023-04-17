@@ -14,7 +14,7 @@
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./highlighted.css">
+    <!-- <link rel="stylesheet" href="./highlighted.css"> -->
     <link rel="stylesheet" href="./animate.css">
 </head>
 
@@ -26,289 +26,302 @@
                 <button id="modal-btn">Close</button>
             </div>
         </div>
-        <div id="register" class="section highlighted ucgreen">
-            <div class="row">
-                <div class="col-md-12 col-lg-5 order-lg-1 order-md-2 order-sm-2 order-2">
-                    <div id="registration" class="card border-0">
-                        <div class="card-header p-4 text-center bg-white ">
-                            <h1 class="fw-bold fs-2 fs-sm-1">
-                                <span id="registration-count" class="accent-text">425</span>
-                                users have already signed up and waiting for beta!
-                            </h1>
-                            <p class="fs-4 pt-4 text-body-secondary">Register now and don't miss any fun!</p>
+
+        <header>
+            <div id="register" class="section highlighted ucgreen">
+                <div class="row">
+                    <div class="col-md-12 col-lg-7 order-lg-1 order-md-1 order-sm-2 order-2">
+                        <div class="container logo mb-4">
+                            <img src="../public/images/logo.png" alt="">
+                            <div class="ms-4">
+                                <h2 class="text-purple fw-bold mb-2">Live in the moment</h2>
+                                <h2 class="text-purple fw-bold">Connect with your surroundings</h2>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <form id="register-form">
-                                <div class="mb-2">
-                                    <label for="usernameInput" class="form-label fw-bold">Username:</label>
-                                    <input type="username" name="username" class="form-control input-ucgreen"
-                                        id="usernameInput" aria-describedby="usernameHelp">
-                                </div>
-                                <div class="mb-2">
-                                    <label for="emailInput" class="form-label fw-bold">Email:</label>
-                                    <input type="email" name="email" class="form-control input-ucgreen" id="emailInput"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="mb-2">
-                                    <label for="birthdayInput" class="form-label fw-bold">Birthday:</label>
-                                    <input type="date" name="birthday" class="form-control input-ucgreen"
-                                        id="birthdayInput" aria-describedby="birthdayHelp">
-                                </div>
-                                <div class="mt-4">
-                                    <button type="submit" class="btn btn-ucgreen w-100">Submit</button>
-                                </div>
-                            </form>
+                        <div class="text-start fs-4">
+                            <ul>
+                                <li>
+                                    <p>Get to know people around you!</p>
+                                </li>
+                                <li>
+                                    <p>Receiving updates on events happing around you!</p>
+                                </li>
+                                <li>
+                                    <p>Know about nearby communities and groups!</p>
+                                </li>
+                                <li>
+                                    <p>Having multiple and customizable profiles!</p>
+                                </li>
+                                <li>
+                                    <p>Manage your presence with your friends!</p>
+                                </li>
+                                <li>
+                                    <p>Get an ID number starting from “00000000000”!</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 col-lg-5 order-lg-2 order-md-2 order-sm-1 order-1">
+                        <div id="registration" class="card border-0 bg-light">
+                            <div class="card-header p-4 text-center bg-light">
+                                <h1 class="fw-bold fs-2 fs-sm-1">
+                                    <span id="registration-count" class="accent-text">425</span>
+                                    users have already signed up and waiting for beta!
+                                </h1>
+                                <p class="fs-4 pt-4 text-body-secondary">Register now and don't miss any fun!</p>
+                            </div>
+                            <div class="card-body bg-light">
+                                <form id="register-form">
+                                    <div class="mb-2">
+                                        <label for="usernameInput" class="form-label fw-bold">Username:</label>
+                                        <input type="username" name="username" class="form-control input-ucgreen"
+                                            id="usernameInput" aria-describedby="usernameHelp">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="emailInput" class="form-label fw-bold">Email:</label>
+                                        <input type="email" name="email" class="form-control input-ucgreen"
+                                            id="emailInput" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="birthdayInput" class="form-label fw-bold">Birthday:</label>
+                                        <input type="date" name="birthday" class="form-control input-ucgreen"
+                                            id="birthdayInput" aria-describedby="birthdayHelp">
+                                    </div>
+                                    <div class="mt-4">
+                                        <button type="submit" class="btn btn-ucgreen w-100">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="mapview" class="section highlighted-reverse ucgreen">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 map-img order-lg-1 order-md-2 order-sm-2 order-2">
+                        <img src="../public/images/Group 157.png" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-12  order-lg-2 order-md-1 order-sm-1 order-1">
+                        <h2 class="dash-top px-2 fw-bold">Accessing nearby activities & communities</h2>
+                        <div id="map-details" class="row py-3 px-2 d-block-flex text-center">
+                            <div class="col-6"><img src="../public/images/Frame 9.png" alt=""></div>
+                            <div class="col-6"><img src="../public/images/Frame 8.png" alt=""></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-7 text-center order-lg-2 order-md-1 order-sm-1 order-1">
-                    <div class="container logo mb-4">
-                        <img src="../public/images/logo.png" alt="">
-                    </div>
-                    <h2 class="text-purple fw-bold mb-4">Live in the moment & connect with your surroundings</h2>
-                    <div class="text-start fs-4">
-                        <ul>
-                            <li>
-                                <p>Get to know people around you!</p>
-                            </li>
-                            <li>
-                                <p>Receiving updates on events happing around you!</p>
-                            </li>
-                            <li>
-                                <p>Know about nearby communities and groups!</p>
-                            </li>
-                            <li>
-                                <p>Having multiple and customizable profiles!</p>
-                            </li>
-                            <li>
-                                <p>Manage your presence with your friends!</p>
-                            </li>
-                            <li>
-                                <p>Get an ID number starting from “00000000000”!</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
             </div>
-        </div>
-        <div id="mapview" class="section highlighted-reverse ucgreen">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 map-img order-lg-1 order-md-2 order-sm-2 order-2">
-                    <img src="../public/images/Group 157.png" alt="">
-                </div>
-                <div class="col-lg-6 col-md-12  order-lg-2 order-md-1 order-sm-1 order-1">
-                    <h3 class="dash-top px-2">Accessing nearby activities & communities</h3>
-                    <div id="map-details" class="row py-3 px-2 d-block-flex text-center">
-                        <div class="col-6"><img src="../public/images/Frame 9.png" alt=""></div>
-                        <div class="col-6"><img src="../public/images/Frame 8.png" alt=""></div>
+    
+            <div id="location-choice" class="section highlighted ucpurple p-5 location-carousel">
+    
+                <div class="slick-item">
+                    <div class="row">
+                        <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                            <img src="../public/images/1.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="dash-top purple fw-bold">Multiple profile cards</h2>
+                            <ul class="fs-4 py-3">
+                                <li>
+                                    <p>Segment your social media presence</p>
+                                </li>
+                                <li>
+                                    <p>Decide which profile to share with each individuals</p>
+                                </li>
+                                <li>
+                                    <p>Decide to share multiple profile cards with friends</p>
+                                </li>
+                                <li>
+                                    <p>Recall a profile card</p>
+                                </li>
+                                <li>
+                                    <p>Customize your own user profile cards</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+    
+                <div class="slick-item">
+                    <div class="row">
+                        <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                            <img src="../public/images/2.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="dash-top purple fw-bold">Chats screen</h2>
+                            <ul class="fs-4 py-3">
+                                <li>
+                                    <p>If not signed-in, your current location won’t be shared</p>
+                                </li>
+                                <li>
+                                    <p>Before signing into a location, your status is “Somewhere Unknown”</p>
+                                </li>
+                                <li>
+                                    <p>You are able to see your friends and their sign-in information</p>
+                                </li>
+                                <li>
+                                    <p>Just use it as any other chat app</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="slick-item">
+                    <div class="row">
+                        <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                            <img src="../public/images/3.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="dash-top purple fw-bold">Map screen</h2>
+                            <ul class="fs-4 py-3">
+                                <li>
+                                    <p>On this screen you are able to a map containing nearby locations</p>
+                                </li>
+                                <li>
+                                    <p>Use the filter on the low right corner to select display settings
+                                        which includes, “Location”, “Communities”, and “Events”</p>
+                                </li>
+                                <li>
+                                    <p>There’s map view and list view on this page, list view provide the
+                                        “location”, “communities”, and “events” in the form of a list and
+                                        rank them according to time and distance from you current location</p>
+                                </li>
+                                <li>
+                                    <p>Only public locations, communities, and events are shown on the
+                                        map, users decide the type when they create those</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="slick-item">
+                    <div class="row">
+                        <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                            <img src="../public/images/4.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="dash-top purple fw-bold">Sign-in and Sign-up</h2>
+                            <ul class="fs-4 py-3">
+                                <li>
+                                    <p>Sign-in/sign-up to all public locations/communities/events.</p>
+                                </li>
+                                <li>
+                                    <p>When signing up for something, it reflects on your profile page</p>
+                                </li>
+                                <li>
+                                    <p>Choose one profile card to share to others in the same location.</p>
+                                </li>
+                                <li>
+                                    <p>You can also some descriptions for your reason of being here for
+                                        your friends to know, but feel free to leave it blank</p>
+                                </li>
+                                <li>
+                                    <p> Others at the same location can only see this particular profile
+                                        card you have share, and vice versa.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="slick-item">
+                    <div class="row">
+                        <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                            <img src="../public/images/5.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="dash-top purple fw-bold">Locations/Communities/Events</h2>
+                            <ul class="fs-4 py-3">
+                                <li>
+                                    <p>All 3 of them have a general chat for everyone to chit-chat </p>
+                                </li>
+                                <li>
+                                    <p>If you belong to some communities, they can decide whether to
+                                        sign their communities in at a location. In this way, others in
+                                        your community gather around!</p>
+                                </li>
+                                <li>
+                                    <p>Events are held in locations by communities.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="slick-item">
+                    <div class="row">
+                        <div id="location-settings" class="col-lg-6 col-md-12 text-center">
+                            <img src="../public/images/6.png" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <h2 class="dash-top purple fw-bold">Scroll through other users profile cards</h2>
+                            <ul class="fs-4 py-3">
+                                <li>
+                                    <p>Users are ranked according to their activeness and contribution
+                                        within the chat.</p>
+                                </li>
+                                <li>
+                                    <p>Users are also able to see their ranking within different chats.</p>
+                                </li>
+                                <li>
+                                    <p>Friends can see your location if you are signed in</p>
+                                </li>
+                                <li>
+                                    <p>Send a request for chatting online, or simple walk around to find
+                                        the one with an intriguing profile card.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
-        </div>
-
-
-        <div id="location-choice" class="section highlighted ucpurple p-5 location-carousel">
-
-            <div class="slick-item">
-                <div class="row">
-                    <div id="location-settings" class="col-lg-6 col-md-12 text-center">
-                        <img src="../public/images/1.png" alt="">
-                    </div>
+    
+            <div id="customize" class="section highlighted-reverse ucpurple">
+                <div class="solidBG ucpurple"></div>
+                <div class="row p-5">
                     <div class="col-lg-6 col-md-12">
-                        <h3 class="dash-top purple">Multiple profile cards</h3>
-                        <ul class="fs-4 py-3">
+                        <h2 class="dash-top purple py-2 fw-bold">Multiple customizable profiles</h2>
+                        <ul class="fs-4">
                             <li>
-                                <p>Segment your social media presence</p>
+                                <p>Sign into locations for it to be shared</p>
                             </li>
                             <li>
-                                <p>Decide which profile to share with each individuals</p>
-                            </li>
-                            <li>
-                                <p>Decide to share multiple profile cards with friends</p>
-                            </li>
-                            <li>
-                                <p>Recall a profile card</p>
-                            </li>
-                            <li>
-                                <p>Customize your own user profile cards</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-item">
-                <div class="row">
-                    <div id="location-settings" class="col-lg-6 col-md-12 text-center">
-                        <img src="../public/images/2.png" alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <h3 class="dash-top purple">Chats screen</h3>
-                        <ul class="fs-4 py-3">
-                            <li>
-                                <p>If not signed-in, your current location won’t be shared</p>
-                            </li>
-                            <li>
-                                <p>Before signing into a location, your status is “Somewhere Unknown”</p>
-                            </li>
-                            <li>
-                                <p>You are able to see your friends and their sign-in information</p>
-                            </li>
-                            <li>
-                                <p>Just use it as any other chat app</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-item">
-                <div class="row">
-                    <div id="location-settings" class="col-lg-6 col-md-12 text-center">
-                        <img src="../public/images/3.png" alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <h3 class="dash-top purple">Map screen</h3>
-                        <ul class="fs-4 py-3">
-                            <li>
-                                <p>On this screen you are able to a map containing nearby locations</p>
-                            </li>
-                            <li>
-                                <p>Use the filter on the low right corner to select display settings
-                                    which includes, “Location”, “Communities”, and “Events”</p>
-                            </li>
-                            <li>
-                                <p>There’s map view and list view on this page, list view provide the
-                                    “location”, “communities”, and “events” in the form of a list and
-                                    rank them according to time and distance from you current location</p>
-                            </li>
-                            <li>
-                                <p>Only public locations, communities, and events are shown on the
-                                    map, users decide the type when they create those</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-item">
-                <div class="row">
-                    <div id="location-settings" class="col-lg-6 col-md-12 text-center">
-                        <img src="../public/images/4.png" alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <h3 class="dash-top purple">Sign-in and Sign-up</h3>
-                        <ul class="fs-4 py-3">
-                            <li>
-                                <p>Sign-in/sign-up to all public locations/communities/events.</p>
-                            </li>
-                            <li>
-                                <p>When signing up for something, it reflects on your profile page</p>
-                            </li>
-                            <li>
-                                <p>Choose one profile card to share to others in the same location.</p>
-                            </li>
-                            <li>
-                                <p>You can also some descriptions for your reason of being here for
-                                    your friends to know, but feel free to leave it blank</p>
-                            </li>
-                            <li>
-                                <p> Others at the same location can only see this particular profile
-                                    card you have share, and vice versa.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-item">
-                <div class="row">
-                    <div id="location-settings" class="col-lg-6 col-md-12 text-center">
-                        <img src="../public/images/5.png" alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <h3 class="dash-top purple">Locations/Communities/Events</h3>
-                        <ul class="fs-4 py-3">
-                            <li>
-                                <p>All 3 of them have a general chat for everyone to chit-chat </p>
-                            </li>
-                            <li>
-                                <p>If you belong to some communities, they can decide whether to 
-                                    sign their communities in at a location. In this way, others in
-                                    your community gather around!</p>
-                            </li>
-                            <li>
-                                <p>Events are held in locations by communities.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slick-item">
-                <div class="row">
-                    <div id="location-settings" class="col-lg-6 col-md-12 text-center">
-                        <img src="../public/images/6.png" alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <h3 class="dash-top purple">Scroll through other users profile cards</h3>
-                        <ul class="fs-4 py-3">
-                            <li>
-                                <p>Users are ranked according to their activeness and contribution
-                                    within the chat.</p>
-                            </li>
-                            <li>
-                                <p>Users are also able to see their ranking within different chats.</p>
+                                <p>Users are “Somewhere Unknown” when not signed in</p>
                             </li>
                             <li>
                                 <p>Friends can see your location if you are signed in</p>
                             </li>
                             <li>
-                                <p>Send a request for chatting online, or simple walk around to find
-                                    the one with an intriguing profile card.</p>
+                                <p>Users can see each other after sign into the same location</p>
                             </li>
                         </ul>
+                        <div id="cartoon-scenarios">
+                            <!-- <img src="https://picsum.photos/id/101/1600/900" alt="">
+                            <img src="https://picsum.photos/id/102/1600/900" alt="">
+                            <img src="https://picsum.photos/id/103/1600/900" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div id="custom-view">
+                            <img src="../public/images/Group 175.png" alt="">
+                        </div>
+                        <h3 class="text-white">Our lives are multifaceted. Know me 1 side at a time!</h3>
                     </div>
                 </div>
             </div>
+        </main>
+        <footer>
+            <div></div>
+        </footer>
 
-        </div>
 
-
-        <div id="customize" class="section highlighted-reverse ucpurple">
-            <div class="solidBG ucpurple"></div>
-            <div class="row p-5">
-                <div class="col-lg-6 col-md-12">
-                    <h3 class="dash-top purple py-2">Multiple customizable profiles</h3>
-                    <ul class="fs-4">
-                        <li>
-                            <p>Sign into locations for it to be shared</p>
-                        </li>
-                        <li>
-                            <p>Users are “Somewhere Unknown” when not signed in</p>
-                        </li>
-                        <li>
-                            <p>Friends can see your location if you are signed in</p>
-                        </li>
-                        <li>
-                            <p>Users can see each other after sign into the same location</p>
-                        </li>
-                    </ul>
-                    <div id="cartoon-scenarios">
-                        <!-- <img src="https://picsum.photos/id/101/1600/900" alt="">
-                        <img src="https://picsum.photos/id/102/1600/900" alt="">
-                        <img src="https://picsum.photos/id/103/1600/900" alt=""> -->
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div id="custom-view">
-                        <img src="../public/images/Group 175.png" alt="">
-                    </div>
-                    <h3 class="text-white">Our lives are multifaceted. Know me 1 side at a time!</h3>
-                </div>
-            </div>
-        </div>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

@@ -14,7 +14,11 @@ body,
   border: none;
   width: 100vw !important;
   max-width: 100% !important;
-  background-color: whitesmoke;
+  background-color: white;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 .btn-ucgreen {
@@ -31,7 +35,8 @@ body,
 .container.logo {
   max-height: 25vh !important;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 #map-details {
@@ -45,7 +50,11 @@ body,
 }
 
 .container.logo > img {
-  object-fit: contain;
+  display: block;
+  max-width: 400px;
+  max-height: 25vh;
+  width: auto;
+  height: auto;
 }
 
 #map-details > div > img,
@@ -78,7 +87,7 @@ body,
   color: #5b5081;
 }
 
-.dash-top::before {
+/* .dash-top::before {
   position: relative;
   display: block;
   content: "";
@@ -89,7 +98,7 @@ body,
 
 .dash-top.purple::before {
   background-color: #5b5081;
-}
+} */
 
 #location-settings,
 #custom-view {
@@ -185,7 +194,7 @@ ul > li::before {
   opacity: 0;
 }
 
-li:not([role=presentation])::before {
+li:not([role="presentation"])::before {
   content: "";
   position: absolute;
   left: 0;
@@ -200,7 +209,7 @@ li:not([role=presentation])::before {
   position: relative;
 }
 
-#customize > .solidBG.ucpurple {
+/* #customize > .solidBG.ucpurple {
   content: "";
   position: absolute;
   bottom: 0;
@@ -208,7 +217,7 @@ li:not([role=presentation])::before {
   width: 100%;
   height: 16rem;
   background-color: #5b5081;
-}
+} */
 
 .slick-prev,
 .slick-next,
