@@ -52,7 +52,7 @@ registerForm.addEventListener("submit", async (e) => {
       email: e.target.email.value,
       birthdate: new Date(e.target.birthday.value),
     });
-    console.log(error);
+    // console.log(error);
     if (error) {
       h2.innerHTML = "Something went wrong. Try again!";
     } else {
@@ -85,12 +85,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 var useless = "";
 const uls = document.getElementsByTagName("ul");
-console.log(uls[0]);
+// console.log(uls[0]);
 const observers = [];
 for (ii = 0; ii < uls.length; ii++) {
   observers.push(
     new IntersectionObserver((entries) => {
-      console.log(entries);
+      // console.log(entries);
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("fadeInUp");
