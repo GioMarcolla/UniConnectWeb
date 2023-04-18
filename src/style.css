@@ -73,7 +73,7 @@ body,
   height: 100vh !important;
   width: 100vw !important;
   background-color: #000a;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999999;
