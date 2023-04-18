@@ -82,6 +82,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 // observer.observe(document.getElementsByTagName("ul"));
 // F**** Vercel!
 
+var useless = ""
 const uls = document.getElementsByTagName("ul");
 console.log(uls[0]);
 const observers = [];
