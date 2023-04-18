@@ -1,6 +1,5 @@
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkZXNnZGVtdGRmYnFiaWR6ZWV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMzY4OTgsImV4cCI6MTk5NjYxMjg5OH0.CgSPGLVfbL2nF1gakBsh6633VnsUu-tJXTI4k65XSaY";
-const url = "https://adesgdemtdfbqbidzeeu.supabase.co";
+const key = process.env.API_KEY
+const url = process.env.API_URL
 
 const supa = supabase.createClient(url, key);
 
