@@ -80,6 +80,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 // // Tell the observer which elements to track
 // observer.observe(document.getElementsByTagName("ul"));
+// F**** Vercel!
 
 const uls = document.getElementsByTagName("ul");
 console.log(uls[0]);
