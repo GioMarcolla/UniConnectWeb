@@ -1,6 +1,5 @@
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkZXNnZGVtdGRmYnFiaWR6ZWV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODEwMzY4OTgsImV4cCI6MTk5NjYxMjg5OH0.CgSPGLVfbL2nF1gakBsh6633VnsUu-tJXTI4k65XSaY";
-const url = "https://adesgdemtdfbqbidzeeu.supabase.co";
+const key = process.env.API_KEY;
+const url = process.env.API_URL;
 
 const supa = supabase.createClient(url, key);
 
@@ -83,13 +82,13 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 // observer.observe(document.getElementsByTagName("ul"));
 
 const uls = document.getElementsByTagName("ul");
-console.log(uls[0])
-const observers = []
+console.log(uls[0]);
+const observers = [];
 for (ii = 0; ii < uls.length; ii++) {
-  observers.push(new IntersectionObserver((entries) => {
-    console.log(entries)
-    entries
-      .forEach((entry) => {
+  observers.push(
+    new IntersectionObserver((entries) => {
+      console.log(entries);
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("fadeInUp");
 
@@ -97,8 +96,8 @@ for (ii = 0; ii < uls.length; ii++) {
         }
         // entry.target.classList.remove("fadeInUp");
       });
-  }));
+    })
+  );
 
-  observers[ii].observe(uls[ii])
+  observers[ii].observe(uls[ii]);
 }
-
